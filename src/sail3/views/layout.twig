@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Silex Bootstrap - {% block title %}No Title{% endblock %}</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="{{ app.request.basePath}}/css/styles.css" media="screen" title="no title" charset="utf-8">
+  {% block head %} {% endblock %}
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      {% block content %}{% endblock %}
+    </div>
+    <div class="row">
+      <div class="col-md-3 well">
+        <div id="left-menu" class="list-group">
+          <a href="#" class="list-group-item">Listar todos</a>
+          <a href="#" class="list-group-item">Registrar Nuevo</a>
+          <a href="#" class="list-group-item">Modificar elemento</a>
+          <a href="#" class="list-group-item">Eliminar</a>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Direccion</th>
+              <th>Acciones</th>
+
+            </tr>
+          </thead>
+          {% block tableBody %} {% endblock %}
+          <!-- <tbody>
+            <tr>
+              <td>12</td>
+              <td>nombre</td>
+              <td>apellido</td>
+              <td>direccion</td>
+              <td>
+                <button type="button" name="button" class="btn btn-xs btn-warning">Modificar</button>
+                <button type="button" name="button" class="btn btn-xs btn-danger">Eliminar</button>
+              </td>
+            </tr>
+          </tbody> -->
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  {% block closing_scripts %}{% endblock %}
+</body>
+</html>

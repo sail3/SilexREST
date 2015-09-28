@@ -1,0 +1,11 @@
+<?php
+
+// Rutas views.
+$app->get("/", "Sail3\Controller\PagesController::index");
+
+
+// Rutas api rest.
+$app->get("/contactos/{id}", "Sail3\Controller\ContactosController::listarContactos");
+$app->post("/contactos/" , "Sail3\Controller\ContactosController::insertarContacto");
+$app->post("/contactos/{id}", "Sail3\Controller\ContactosController::modificarContacto");
+$app->delete("/contactos/{id}", "Sail3\Controller\ContactosController::eliminarContacto");

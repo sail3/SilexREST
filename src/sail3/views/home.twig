@@ -1,0 +1,29 @@
+{% extends 'layout.twig' %}
+{% block title %} DefaultController::index {% endblock %}
+
+{% block content %}
+<h1>sail3 testing Silex</h1>
+<p>todo esta saliendo din problemas ;)</p>
+{% endblock %}
+
+{% block closing_scripts %}
+<script type="text/javascript" src="{{ app.request.basePath}}/js/script.js"></script>
+{% endblock %}
+
+{% block tableBody %}
+<tbody>
+  {% for contacto in contactos %}
+    <tr>
+      <td>{{ contacto.idcontacto }}</td>
+      <td>{{ contacto.nombre }}</td>
+      <td>{{ contacto.apellido }}</td>
+      <td>{{ contacto.direccion}}</td>
+      <td>
+        <button type="button" name="button" class="btn btn-xs btn-warning">Modificar</button>
+        <button id="{{contacto.idcontacto}}" type="button" name="button" class="btn btn-xs btn-danger">Eliminar</button>
+      </td>
+    </tr>
+  {% endfor %}
+
+</tbody>
+{% endblock %}
