@@ -11,43 +11,19 @@
 <body>
   <div class="container">
     <div class="row">
-      {% block content %}{% endblock %}
+      <h1>Proyecto de prueba en silex</h1><hr>
     </div>
     <div class="row">
       <div class="col-md-3 well">
         <div id="left-menu" class="list-group">
-          <a href="#" class="list-group-item">Listar todos</a>
-          <a href="#" class="list-group-item">Registrar Nuevo</a>
+          <a href="/" class="list-group-item">Listar todos</a>
+          <a href="registrar" class="list-group-item">Registrar Nuevo</a>
           <a href="#" class="list-group-item">Modificar elemento</a>
           <a href="#" class="list-group-item">Eliminar</a>
         </div>
       </div>
       <div class="col-md-9">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Nombre</th>
-              <th>Apellido</th>
-              <th>Direccion</th>
-              <th>Acciones</th>
-
-            </tr>
-          </thead>
-          {% block tableBody %} {% endblock %}
-          <!-- <tbody>
-            <tr>
-              <td>12</td>
-              <td>nombre</td>
-              <td>apellido</td>
-              <td>direccion</td>
-              <td>
-                <button type="button" name="button" class="btn btn-xs btn-warning">Modificar</button>
-                <button type="button" name="button" class="btn btn-xs btn-danger">Eliminar</button>
-              </td>
-            </tr>
-          </tbody> -->
-        </table>
+        {% block content %}{% endblock %}
       </div>
     </div>
   </div>
